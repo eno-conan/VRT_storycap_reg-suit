@@ -1,47 +1,28 @@
 # Getting Started with Create React App
+storybookのインストールコマンドは以下記事を参考にした。
 https://www.asobou.co.jp/blog/web/chromatic-vrt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ライブラリのインストール
+https://tech.uzabase.com/entry/2022/10/13/152134
 
-## Available Scripts
+スクリーンショットを取得するためのコマンド
+https://blog.mmmcorp.co.jp/2022/08/29/storycap-reg-suit-codebuild/
 
-In the project directory, you can run:
+以下コマンドを実行したときに成功した。
+```
+npx storycap --serverCmd "npx start-storybook -p 6006 --ci" http://localhost:6006
+```
+ただし、`package.json`に以下のように実装すると成功しない
+```
+storycap --serverCmd 'npx storybook -p 6006 --ci' http://localhost:6006
+```
+以下記事のコマンドで、実行できた。
+https://blog.wadackel.me/2022/vrt-performance-optimize/
+```
+storycap http://localhost:6006 --serverCmd \"npx serve -l 6006 storybook-static\"
+```
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+一連の流れは記載されている
+https://qiita.com/masaki632d/items/a84feca5e04e292b5275
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
