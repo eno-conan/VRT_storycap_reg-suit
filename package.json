@@ -23,7 +23,8 @@
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "screenshot": "storycap http://localhost:6006 --serverCmd \"npx serve -l 6006 storybook-static\""
+    "screenshot": "storycap http://localhost:6006 --serverCmd \"npx serve -l 6006 storybook-static\"",
+    "vrt": "reg-suit run"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +58,9 @@
     "babel-plugin-named-exports-order": "^0.0.2",
     "eslint-plugin-storybook": "^0.6.13",
     "prop-types": "^15.8.1",
+    "reg-keygen-git-hash-plugin": "^0.12.2",
+    "reg-notify-github-plugin": "^0.12.2",
+    "reg-publish-s3-plugin": "^0.12.2",
     "reg-suit": "^0.12.2",
     "storybook": "^7.2.2",
     "storycap": "^4.2.0",
