@@ -23,6 +23,7 @@ jobs:
       - name: workaround for detached HEAD
         run: |
           git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/}
-      - run: npm run build-storybook
+      - run: npm run build-storybook -o ./.storybook-build
+      - run: mv ./.storybook-build ./public
       - run: npm run screenshot
       - run: npm run vrt
